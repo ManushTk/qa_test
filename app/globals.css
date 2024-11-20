@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.mainContainer{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("online_tst.jpg");
+    background-size: cover; /* Ensures the image covers the entire container */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        background-position: center; /* Centers the image */
+}
+
+/* For smaller devices (tablets and phones) */
+@media (max-width: 768px) { 
+    .mainContainer {
+        background-size: contain; /* Ensure the entire image fits inside */
+        background-position: center; /* Keep the image centered */
+    }
+}
+
+/* For very small devices (phones in portrait mode) */
+@media (max-width: 480px) {
+    .mainContainer {
+        background-size: cover; /* Adjust to ensure better appearance */
+        background-position: top; /* Focus on the top of the image if necessary */
+    }
+}
